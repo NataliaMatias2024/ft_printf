@@ -6,7 +6,7 @@
 /*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 16:49:55 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/13 18:36:16 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/13 20:24:35 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,17 @@ int	ft_put_s(char *s)
 	int	i;
 
 	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (s[i])
 	{
 		ft_put_c(s[i]);
 		i++;
 	}
-	s[i] = '\0';
+	if (i < 0)
+		return (-1);
 	return (i);
 }
