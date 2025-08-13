@@ -6,7 +6,7 @@
 /*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 15:46:26 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/13 19:13:19 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/13 20:30:20 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,16 @@ static int	ft_arg(const char c, va_list ap)
 		return (ft_put_c(va_arg(ap, int)));
 	if (c == 's')
 		return (ft_put_s(va_arg(ap, char *)));
-	if (c == 'p')
-		return (0);
-	if (c == 'd')
-		return (0);
-	if (c == 'i')
-		return (0);
-	if (c == 'u')
-		return (0);
-	if (c == 'x')
-		return (0);
-	if (c == 'X')
-		return (0);
+	// if (c == 'p')
+	// 	return (0);
+	// if (c == 'd')
+	// 	return (0);
+	if ((c == 'i') || (c == 'u'))
+		return (ft_put_nbr(va_arg(ap, int)));
+	// if (c == 'x')
+	// 	return (0);
+	// if (c == 'X')
+	// 	return (0);
 	if (c == '%')
 		return (ft_put_c('%'));
 	return (0);
@@ -55,6 +53,6 @@ int	ft_printf(const char *format, ...)
 		i++;
 	}
 	if (count < 0)
-		return (9);
+		return (-1);
 	return (count);
 }
