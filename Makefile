@@ -6,7 +6,7 @@
 #    By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/09 15:29:38 by namatias          #+#    #+#              #
-#    Updated: 2025/08/13 18:42:59 by namatias         ###   ########.fr        #
+#    Updated: 2025/08/13 20:38:20 by namatias         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-FILESC = ft_printf.c ft_put_c.c ft_put_s.c
+FILESC = ft_printf.c ft_put_c.c ft_put_s.c ft_put_nbr.c
 
 FILESO = $(FILESC:.c=.o)
 
@@ -33,7 +33,7 @@ $(NAME): $(FILESO)
 	ar crs $(NAME) $(FILESO)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) -I. $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(FILESO)
