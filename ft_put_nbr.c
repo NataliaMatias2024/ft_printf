@@ -14,5 +14,19 @@
 
 int	ft_put_nbr(int c)
 {
-;
+	long	nbr;
+	int		i;
+
+	i = 0;
+	nbr = c;
+	if (nbr < 0)
+	{
+		ft_put_c ('-');
+		i++;
+		nbr *= -1; 
+	}
+	if (nbr > 9)
+		i = i + ft_put_nbr(nbr/10);
+	i = i + ft_put_c ((nbr%10)  + '0');
+	return (i);
 }
