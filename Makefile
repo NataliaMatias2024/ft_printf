@@ -19,7 +19,8 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-FILESC = ft_printf.c ft_put_c.c ft_put_s.c ft_put_nbr.c
+FILESC = ft_printf.c ft_put_c.c ft_put_nbr.c ft_put_p.c ft_put_s.c \
+		 ft_put_x..c ft_put_X.c ft_put_nbr_u.c
 
 FILESO = $(FILESC:.c=.o)
 
