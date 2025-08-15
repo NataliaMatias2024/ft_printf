@@ -27,7 +27,7 @@ static int	ft_check_arg(const char c, va_list ap)
 	if (c == 'x')
 		return (ft_put_x(va_arg(ap, unsigned int)));
 	if (c == 'X')
-		return (ft_put_X(va_arg(ap, unsigned int), 1));
+		return (ft_put_X(va_arg(ap, unsigned int)));
 	if (c == '%')
 		return (ft_put_c(c));
 	return (0);
