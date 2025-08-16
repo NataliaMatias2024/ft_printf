@@ -6,13 +6,13 @@
 /*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 01:35:59 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/16 09:13:17 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/16 09:33:28 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_put_longx(size_t c);
+static int	ft_put_longx(size_t c);
 
 int	ft_put_p(void *c)
 {
@@ -34,7 +34,7 @@ int	ft_put_p(void *c)
 	return (i);
 }
 
-int	ft_put_longx(size_t c)
+static int	ft_put_longx(size_t c)
 {
 	int	i;
 	int	digit;
