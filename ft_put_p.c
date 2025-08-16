@@ -12,12 +12,12 @@
 
 #include "ft_printf.h"
 
-int	ft_put_longx(unsigned long c);
+int	ft_put_longx(size_t c);
 
 int	ft_put_p(void *c)
 {
-	int				i;
-	unsigned long	adress;
+	int		i;
+	size_t	adress;
 
 	i = 0;
 	if(!c)
@@ -34,7 +34,7 @@ int	ft_put_p(void *c)
 	return (i);
 }
 
-int	ft_put_longx(unsigned long c)
+int	ft_put_longx(size_t c)
 {
 	int	i;
 	int digit;
