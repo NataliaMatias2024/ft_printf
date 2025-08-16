@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_X.c                                         :+:      :+:    :+:   */
+/*   ft_put_x_upper.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namatias <namatias@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 01:27:04 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/15 01:27:04 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/16 09:11:33 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_put_X(unsigned int c)
+int	ft_put_x_upper(unsigned int c)
 {
 	int				i;
 	unsigned int	result;
 
 	i = 0;
 	if (c > 15)
-		i = i + ft_put_X(c / 16);
+		i = i + ft_put_x_upper(c / 16);
 	result = c % 16;
 	if (result <= 9)
 		i = i + ft_put_c(result + '0');

@@ -6,7 +6,7 @@
 #    By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/09 15:29:38 by namatias          #+#    #+#              #
-#    Updated: 2025/08/13 20:38:20 by namatias         ###   ########.fr        #
+#    Updated: 2025/08/16 09:11:16 by namatias         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 FILESC = ft_printf.c ft_put_c.c ft_put_nbr.c ft_put_p.c ft_put_s.c \
-		 ft_put_x..c ft_put_X.c ft_put_nbr_u.c
+		 ft_put_x..c ft_put_x_upper.c ft_put_nbr_u.c
 
 FILESO = $(FILESC:.c=.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_p.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namatias <namatias@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 01:35:59 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/15 01:35:59 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/16 09:13:17 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_put_p(void *c)
 	size_t	adress;
 
 	i = 0;
-	if(!c)
+	if (!c)
 	{
 		i = i + ft_put_s("(nil)");
 		return (i);
@@ -29,7 +29,7 @@ int	ft_put_p(void *c)
 	{
 		i = i + ft_put_s("0x");
 		adress = (unsigned long)c;
-		i = i + ft_put_longx(adress);		
+		i = i + ft_put_longx(adress);
 	}
 	return (i);
 }
@@ -37,7 +37,7 @@ int	ft_put_p(void *c)
 int	ft_put_longx(size_t c)
 {
 	int	i;
-	int digit;
+	int	digit;
 
 	i = 0;
 	if (c > 15)

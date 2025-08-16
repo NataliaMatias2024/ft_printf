@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_nbr_u.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: namatias <namatias@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 19:51:23 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/14 19:51:23 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/16 09:08:55 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_put_nbr_u(unsigned int c)
+int	ft_put_nbr_u(unsigned int c)
 {
 	int	i;
 
