@@ -6,7 +6,7 @@
 /*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 15:46:26 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/13 20:30:20 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/16 09:21:27 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_check_arg(const char c, va_list ap)
 	if (c == 'x')
 		return (ft_put_x(va_arg(ap, unsigned int)));
 	if (c == 'X')
-		return (ft_put_X(va_arg(ap, unsigned int)));
+		return (ft_put_x_upper(va_arg(ap, unsigned int)));
 	if (c == '%')
 		return (ft_put_c(c));
 	return (0);
