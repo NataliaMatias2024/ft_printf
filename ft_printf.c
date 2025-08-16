@@ -6,32 +6,13 @@
 /*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 15:46:26 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/16 09:21:27 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/16 15:00:29 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_check_arg(const char c, va_list ap)
-{
-	if (c == 'c')
-		return (ft_put_c(va_arg(ap, int)));
-	if (c == 's')
-		return (ft_put_s(va_arg(ap, char *)));
-	if (c == 'p')
-		return (ft_put_p(va_arg(ap, void *)));
-	if ((c == 'd') || (c == 'i'))
-		return (ft_put_nbr(va_arg(ap, int)));
-	if (c == 'u')
-		return (ft_put_nbr_u(va_arg(ap, unsigned int)));
-	if (c == 'x')
-		return (ft_put_x(va_arg(ap, unsigned int)));
-	if (c == 'X')
-		return (ft_put_x_upper(va_arg(ap, unsigned int)));
-	if (c == '%')
-		return (ft_put_c(c));
-	return (0);
-}
+static int	ft_check_arg(const char c, va_list ap);
 
 int	ft_printf(const char *format, ...)
 {
@@ -55,4 +36,25 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(ap);
 	return (count);
+}
+
+static int	ft_check_arg(const char c, va_list ap)
+{
+	if (c == 'p')
+		return (ft_put_p(va_arg(ap, void *)));
+	else if (c == 'c')
+		return (ft_put_c(va_arg(ap, int)));
+	else if (c == 's')
+		return (ft_put_s(va_arg(ap, char *)));
+	else if ((c == 'd') || (c == 'i'))
+		return (ft_put_nbr(va_arg(ap, int)));
+	else if (c == 'x')
+		return (ft_put_x(va_arg(ap, unsigned int)));
+	else if (c == 'u')
+		return (ft_put_nbr_u(va_arg(ap, unsigned int)));
+	else if (c == 'X')
+		return (ft_put_x_upper(va_arg(ap, unsigned int)));
+	else if (c == '%')
+		return (ft_put_c(c));
+	return (0);
 }

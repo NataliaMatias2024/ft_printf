@@ -6,7 +6,7 @@
 /*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 01:35:59 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/16 09:33:28 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/16 11:11:26 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_put_longx(size_t c);
 int	ft_put_p(void *c)
 {
 	int		i;
-	size_t	adress;
+	size_t	address;
 
 	i = 0;
 	if (!c)
@@ -28,8 +28,8 @@ int	ft_put_p(void *c)
 	else
 	{
 		i = i + ft_put_s("0x");
-		adress = (unsigned long)c;
-		i = i + ft_put_longx(adress);
+		address = (size_t)c;
+		i = i + ft_put_longx(address);
 	}
 	return (i);
 }
