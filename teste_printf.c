@@ -1,4 +1,4 @@
-
+//libs necessarias p os testes
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -8,8 +8,7 @@
 
 // --- COLE A SUA IMPLEMENTAÇÃO COMPLETA DE ft_printf AQUI ---
 // (todas as funções ft_...)
-// o seu código completo aqui, mas ele deve estar nesta seção
-// para o main poder chamá-lo.
+// deve estar nesta seção para o main poder chamá-lo.
 
 
 // --- FUNÇÃO MAIN PARA RODAR OS TESTES ---
