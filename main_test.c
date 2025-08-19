@@ -6,15 +6,20 @@
 /*   By: namatias <namatias@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 12:04:33 by namatias          #+#    #+#             */
-/*   Updated: 2025/08/19 13:57:55 by namatias         ###   ########.fr       */
+/*   Updated: 2025/08/19 16:31:28 by namatias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//libs para rodar testes
+// --- FUNÇÃO MAIN PARA RODAR OS TESTES ---
+//Adicione as bibliotecas
+//Copie para o seu arquivo princial, no meu caso ft_printf.c
+//Por fim compile usando cc + flags + os nomes dos seus arquivos
+//no meu caso sera:
+//cc -Wall -Werror -Wextra ft_put_c.c ft_put_nbr.c ft_put_nbr_u.c ft_put_p.c ft_put_s.c ft_put_x.c ft_put_x_upper.c ft_printf.c ft_printf.h
+
 #include <stdio.h>
 #include <limits.h>
 
-// --- FUNÇÃO MAIN PARA RODAR OS TESTES ---
 int main(void)
 {
     char	c;
@@ -138,6 +143,3 @@ printf("\n----------------------------------------------------\n");
 printf("\n----------------------------------------------------\n");
     return 0;
 }
-
-//para compilar
-//cc -Wall -Werror -Wextra ft_put_c.c ft_put_nbr.c ft_put_nbr_u.c ft_put_p.c ft_put_s.c ft_put_x.c ft_put_x_upper.c ft_printf.c ft_printf.h
