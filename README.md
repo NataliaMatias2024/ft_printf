@@ -27,13 +27,7 @@ Reimplementar a função `printf`, com suporte aos seguintes **format specifiers
 
 ```
 .
-├── ft_printf.c         # Função principal
-├── ft_printf_utils.c   # Funções auxiliares
-├── ft_putnbr_base.c    # Conversão para base (hex, dec, etc.)
-├── ft_putptr.c         # Impressão de ponteiros
-├── ft_putchar.c        # Impressão de caractere
-├── ft_putstr.c         # Impressão de strings
-├── ft_strlen.c         # Função auxiliar: tamanho de string
+...
 ├── ft_printf.h         # Header principal
 ├── Makefile            # Compilação
 └── README.md           # Este arquivo
