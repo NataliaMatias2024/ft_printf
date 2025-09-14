@@ -25,58 +25,69 @@ Reimplementar a função `printf`, com suporte aos seguintes **format specifiers
 
 ## 🛠️ Estrutura do Projeto
 
-```bash
+```
 .
-├── ft_printf.c        # Função principal ft_printf
-├── ft_printf_utils.c  # Funções auxiliares para formatação
-├── ft_putnbr_base.c   # Conversões numéricas
-├── ft_putptr.c        # Impressão de ponteiros
-├── ft_putchar.c       # Escrita de caracteres
-├── ft_putstr.c        # Escrita de strings
-├── ft_strlen.c        # Função auxiliar de string
-├── Makefile           # Script de compilação
-├── ft_printf.h        # Header do projeto
-└── README.md          # Este arquivo
+├── ft_printf.c         # Função principal
+├── ft_printf_utils.c   # Funções auxiliares
+├── ft_putnbr_base.c    # Conversão para base (hex, dec, etc.)
+├── ft_putptr.c         # Impressão de ponteiros
+├── ft_putchar.c        # Impressão de caractere
+├── ft_putstr.c         # Impressão de strings
+├── ft_strlen.c         # Função auxiliar: tamanho de string
+├── ft_printf.h         # Header principal
+├── Makefile            # Compilação
+└── README.md           # Este arquivo
+```
 
-## 🔧 Compilação
+## ⚙️ Compilação
 
-Para compilar a biblioteca, basta rodar:
+Para compilar:
+
+```bash
 make
+```
 
-Isso irá gerar o arquivo libftprintf.a, que pode ser incluído em outros projetos.
+Isso irá gerar a biblioteca estática `libftprintf.a`, que pode ser usada em outros projetos:
+
+Inclua o cabeçalho no seu código:
+
+```c
+#include "ft_printf.h"
+```
 
 ## 📦 Exemplo de uso
+
+```c
 #include "ft_printf.h"
 
 int main(void)
 {
     ft_printf("Hello, %s!\n", "world");
-    ft_printf("Número: %d | Hex: %x | Char: %c\n", 42, 42, 'A');
+    ft_printf("Char: %c | Int: %d | Hex: %x | Pointer: %p\n", 'A', 42, 42, (void *)0x1234);
     return 0;
 }
+```
 
-Saída esperada:
+**Saída esperada:**
+
+```
 Hello, world!
-Número: 42 | Hex: 2a | Char: A
+Char: A | Int: 42 | Hex: 2a | Pointer: 0x1234
+```
 
 ## 📚 Aprendizados
 
-Durante o projeto, foi possível:
-
-Trabalhar com manipulação de tipos e formatação personalizada.
-
-Usar va_list, va_start, va_arg e va_end.
-
-Refatorar código para maior legibilidade e modularidade.
-
-Entender como a função printf lida com diferentes tipos de entrada.
+- Manipulação de argumentos variádicos com `stdarg.h`
+- Conversão numérica para diferentes bases (hexadecimal, decimal, unsigned)
+- Escrita de funções modulares e reutilizáveis
+- Uso seguro de ponteiros, strings e tipos de dados
+- Implementação de lógica de formatação semelhante à da função `printf` original
 
 ## 🚫 Limitações
 
-Este projeto não implementa os bônus (flags, largura, precisão ou alinhamento).
-
-O comportamento é limitado aos conversores obrigatórios descritos acima.
+- Este projeto não implementa os bônus (flags, largura, precisão ou alinhamento).
+- O comportamento é limitado aos conversores obrigatórios descritos acima.
 
 ## ✅ Status
 
-✔️ Projeto finalizado e aprovado na 42 SP.
+✔️ Projeto finalizado e aprovado na 42 São Paulo.
