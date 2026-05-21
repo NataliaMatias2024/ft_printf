@@ -92,7 +92,9 @@ Char: A | Int: 42 | Hex: 2a | Pointer: 0x1234
 ## 🧠 Lições Aprendidas e Dicas
 
 **- Flexibilidade com stdarg.h:** Manipulação de argumentos variádicos com `stdarg.h` e descobrir como C lida com argumentos desconhecidos.
+
 **- Recursividade e Bases:**  Conversão numérica para diferentes bases (hexadecimal, decimal, unsigned), que reforçou minha base de algoritmos.
+
 **- Modularização:** Otimo exercício de organização de funções em diferentes arquivos, pensando em reutilizar uma mesma função para diferentes fins.
 
 A quantidade de conceitos novos sempre dá um frio na barriga e deixa a gente sem saber por onde começar. Dividir e conquistar sempre será a melhor saída! Pequenas funções que funcionem de forma independente, como um ft_putnbr, sempre serão um bom ponto de partida quando ainda não se sabe muito o que fazer rs.
